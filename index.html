@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Box Vending Machine</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="container">
+        <div class="vending-machine">
+            <div class="machine-header">
+                <div class="neon-text">Mystery Boxes</div>
+                <div class="price-container">
+                    <img src="https://cryptologos.cc/logos/solana-sol-logo.png" alt="SOL" class="sol-logo">
+                    <div class="price">0.3 SOL</div>
+                </div>
+            </div>            
+            <div class="display-screen">
+                <div class="screen-text">WIN 10 SOL OR TURD!</div>
+            </div>
+            <div class="boxes-container">
+                <div class="box" data-box="1">?</div>
+                <div class="box" data-box="2">?</div>
+                <div class="box" data-box="3">?</div>
+                <div class="box" data-box="4">?</div>
+                <div class="box" data-box="5">?</div>
+                <div class="box" data-box="6">?</div>
+            </div>
+            <div class="machine-footer">
+                <button class="connect-wallet">Connect Wallet</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

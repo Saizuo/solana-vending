@@ -1,0 +1,181 @@
+:root {
+    --primary-purple: #6b0099;
+    --dark-purple: #2a0040;
+    --neon-pink: #ff00ff;
+    --glow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    overflow: hidden;
+    background: url('https://i.pinimg.com/originals/eb/ef/b0/ebefb0c7a04cf87e3c45169ed185de89.gif') center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+/* Make particles slightly more transparent to see the background better */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+/* Add some transparency to the vending machine to blend with the background */
+.vending-machine {
+    background: linear-gradient(45deg, rgba(58, 0, 87, 0.9), rgba(74, 0, 102, 0.9));
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.vending-machine {
+    background: linear-gradient(45deg, #3a0057, #4a0066);
+    border: 4px solid var(--neon-pink);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: var(--glow);
+    width: 400px;
+}
+
+.machine-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.neon-text {
+    font-size: 2rem;
+    color: var(--neon-pink);
+    text-shadow: var(--glow);
+    animation: neon-pulse 1.5s infinite alternate;
+}
+  .price-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 1rem;
+  }
+
+  .sol-logo {
+      width: 24px;
+      height: 24px;
+      animation: rotate 10s linear infinite;
+  }
+
+  @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+  }
+
+  .price {
+      font-size: 1.5rem;
+      color: #fff;
+  }
+.display-screen {
+    background: #000;
+    border: 2px solid var(--neon-pink);
+    padding: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.screen-text {
+    color: #0f0;
+    font-size: 1rem;
+}
+
+.boxes-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.poop-gif {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+.box {
+    background: linear-gradient(135deg, #4a0066, #2a0040);
+    border: 2px solid var(--neon-pink);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 
+        0 0 10px var(--neon-pink),
+        0 0 20px var(--neon-pink),
+        0 0 30px #fff;
+    overflow: hidden;
+}
+  .box:hover {
+      transform: scale(1.05);
+      box-shadow: var(--glow);
+  }
+.connect-wallet {
+    background: var(--neon-pink);
+    border: none;
+    padding: 1rem 2rem;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.connect-wallet:hover {
+    transform: scale(1.05);
+    box-shadow: var(--glow);
+}
+
+@keyframes neon-pulse {
+    from {
+        text-shadow: var(--glow);
+    }
+    to {
+        text-shadow: none;
+    }
+}
+
+/* Add this to existing CSS */
+.box.turd::after {
+    content: '🚽';
+    font-size: 2.5rem;
+    animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.box {
+    pointer-events: none;
+}
+
+.connect-wallet.connected {
+    background: #4CAF50;
+    pointer-events: none;
+}
